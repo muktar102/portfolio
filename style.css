@@ -326,18 +326,13 @@ margin:15px 0;
 
 /* Footer */
 
-footer{
-
-background:#161B22;
-
-padding:25px;
-
-text-align:center;
-
-margin-top:40px;
-
-color:#888;
-
+footer {
+    background: #161b22;
+    color: #888;
+    text-align: center;
+    padding: 28px 20px;
+    margin: 0;
+    border: none;
 }
 
 
