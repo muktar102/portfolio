@@ -344,3 +344,52 @@ menuToggle.addEventListener("click", () => {
     }
 
 });
+
+
+
+
+/* form submission */
+////////////////////
+
+const form = document.getElementById("contact-form");
+const popup = document.getElementById("success-popup");
+const closePopup = document.getElementById("close-popup");
+
+form.addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const data = new FormData(form);
+
+    try {
+        const response = await fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                "Accept": "application/json"
+            }
+        });
+
+        if (response.ok) {
+            form.reset();
+
+            // Show success popup
+            popup.classList.add("show");
+        } else {
+            alert("Something went wrong. Please try again.");
+        }
+
+    } catch (error) {
+        alert("Something went wrong. Please try again.");
+    }
+});
+
+closePopup.addEventListener("click", function() {
+    popup.classList.remove("show");
+});
+
+// Close when clicking outside the box
+popup.addEventListener("click", function(event) {
+    if (event.target === popup) {
+        popup.classList.remove("show");
+    }
+});

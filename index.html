@@ -514,21 +514,184 @@ Verify Credential
 
 </section>
 
-<section id="contact">
 
-<h2>Let's Connect</h2>
-<p>
+<section class="contact-section" id="contact">
 
- <a href="https://www.linkedin.com/in/ahmed-muhumed-189b46217/" target="_blank">
-            <i class="fa-brands fa-linkedin"></i>
-            LinkedIn
-        </a>
+    <!-- TOP HEADER -->
+    <div class="contact-header">
+        <span class="contact-label">GET IN TOUCH</span>
 
- <a href="https://github.com/muktar102" target="_blank">
-            <i class="fa-brands fa-github"></i>
-            GitHub
-        </a>
-</p>
+        <h2>Contact <span>Me</span></h2>
+
+        <p>
+            Interested in connecting? Send me a message and I'll get back to you.
+        </p>
+    </div>
+
+
+    <!-- LEFT + RIGHT CARDS -->
+    <div class="contact-wrapper">
+
+        <!-- =========================
+             LEFT CARD
+        ========================== -->
+        <div class="contact-card contact-info-card">
+
+            <h3 class="card-title">CONTACT INFO</h3>
+
+            <div class="contact-details">
+
+                <!-- EMAIL -->
+                <div class="info-item">
+
+                    <div class="info-icon">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+
+                    <div class="info-text">
+                        <span>MAIL ME</span>
+
+                        <a href="mailto:YOUR-EMAIL@gmail.com">
+                           Muktaar873@gmail.com
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <!-- PHONE -->
+                <div class="info-item">
+
+                    <div class="info-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+
+                    <div class="info-text">
+                        <span>CONTACT ME</span>
+                         <p>+1 902 930 4775</p>
+                        
+                            
+                        
+                    </div>
+
+                </div>
+
+
+                <!-- LOCATION -->
+                <div class="info-item">
+
+                    <div class="info-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <div class="info-text">
+                        <span>LOCATION</span>
+
+                        <p>Nova Scotia, Canada</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SOCIAL LINKS -->
+            <div class="connect-area">
+
+                <h3>LET'S CONNECT</h3>
+
+                <div class="social-buttons">
+
+                    <!-- LINKEDIN -->
+                    <a
+                        href="https://www.linkedin.com/in/ahmed-muhumed-189b46217/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-btn"
+                        aria-label="LinkedIn"
+                    >
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+
+                    <!-- GITHUB -->
+                    <a
+                        href="https://github.com/muktar102"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-btn"
+                        aria-label="GitHub"
+                    >
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             RIGHT CARD
+        ========================== -->
+        <div class="contact-card contact-form-card">
+
+            <h2>
+                Let's <span>connect.</span>
+            </h2>
+
+            <p class="form-description">
+                Have a question or opportunity? Feel free to send me a message.
+            </p>
+
+
+            <!-- FORMSPREE FORM -->
+           
+            <form  id="contact-form" action="https://formspree.io/f/xdengnjw" 
+                method="POST">
+                
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Name *"
+                    required
+                >
+
+
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Email *"
+                    required
+                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                    title="Please enter a valid email address, for example: name@example.com"
+>
+
+
+                <textarea
+                    name="message"
+                    placeholder="Your Message *"
+                    required
+                ></textarea>
+
+
+                <button type="submit">
+
+                    Send Message
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                </button>
+
+          <p id="form-status"></p>
+            </form>
+
+        </div>
+
+    </div>
 
 </section>
 
@@ -541,7 +704,22 @@ Verify Credential
 </p>
 
 </footer>
+<!-- SUCCESS POPUP -->
+<div id="success-popup" class="success-popup">
+    <div class="success-popup-box">
 
+        <div class="success-check">
+            <i class="fa-solid fa-check"></i>
+        </div>
+
+        <h3>Message Sent!</h3>
+
+        <p>Your message was sent successfully.</p>
+
+        <button type="button" id="close-popup">OK</button>
+
+    </div>
+</div>
 </body>
 <script src="script.js"></script>
 </html>
