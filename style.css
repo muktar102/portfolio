@@ -125,7 +125,7 @@ margin-bottom:35px;
     width:190px;
     height:58px;
 
-    background:#9AF33B;
+    background:#00ff88;
     color:#111;
 
     border-radius:40px;
@@ -244,80 +244,88 @@ padding-left:20px;
 margin:10px 0;
 
 }
+
 /* ===========================
-   CERTIFICATIONS
+   SMALL CERTIFICATION CARDS
 =========================== */
 
-.certifications{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:35px;
-    margin-top:40px;
+.certifications {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 240px));
+    justify-content: center;
+    gap: 16px;
+    margin-top: 25px;
 }
 
-.cert-card{
-    background:linear-gradient(180deg,#1c2128,#11151b);
-    border:2px solid #00ff8830;
-    border-radius:20px;
-    padding:35px;
-    text-align:center;
-    transition:.35s;
-    box-shadow:0 10px 25px rgba(0,0,0,.35);
+.cert-card {
+    background: linear-gradient(180deg, #1c2128, #11151b);
+    border: 1px solid #00ff8830;
+    border-radius: 10px;
+    padding: 16px 12px;
+    min-height: 235px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.cert-card:hover{
-    transform:translateY(-10px);
-    border-color:#00ff88;
-    box-shadow:0 0 30px rgba(0,255,136,.35);
+.cert-card:hover {
+    transform: translateY(-4px);
+    border-color: #00ff88;
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.25);
 }
 
-.cert-card img{
-    width:170px;
-    height:170px;
-    object-fit:contain;
-    margin-bottom:20px;
+.cert-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
 }
 
-.cert-card h3{
-    color:#fff;
-    font-size:24px;
-    margin:10px 0;
+.cert-card h3 {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.35;
+    margin: 4px 0 8px;
 }
 
-.issuer{
-    color:#9ca3af;
-    font-size:16px;
-    margin-bottom:10px;
+.issuer {
+    color: #9ca3af;
+    font-size: 12px;
+    margin-bottom: 6px;
 }
 
-.status{
-    color:#00ff88;
-    font-weight:700;
-    margin-bottom:20px;
+.status {
+    color: #00ff88;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 4px 0 10px;
 }
 
-.verify-btn{
-    display:inline-block;
-    padding:12px 28px;
-    border-radius:30px;
-    /*#00ff88*/
-    background: #5bad03;
-    color:#000;
-    text-decoration:none;
-    font-weight:700;
+.verify-btn {
+    display: inline-block;
+    padding: 7px 15px;
+    margin-top: auto;
+    border-radius: 18px;
+    background: #00ff88!important;
+    color: #000;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
 }
 
-.verify-btn:hover{
-    background:#fff;
-}
-/* Contact */
-
-#contact{
-
-text-align:center;
-
+.verify-btn:hover {
+    background: #fff;
 }
 
+@media (max-width: 500px) {
+    .certifications {
+        grid-template-columns: minmax(190px, 240px);
+    }
+}
 #contact p{
 
 margin:15px 0;
